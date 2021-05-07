@@ -19,8 +19,10 @@ function UploadForm() {
   };
 
   return (
-    <form>
-      <input type="file" onChange={changeHandler} />
+    <form className="file-input">
+      <input type="file" onChange={changeHandler} id="file" className="file" />
+      <label for="file">Select file</label>
+
       <div className="output">
         {err && <div className="error">{err}</div>}
         {file && <div>{file.name}</div>}
